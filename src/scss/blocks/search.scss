@@ -1,0 +1,35 @@
+.search {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 2rem;
+  &__text {
+    background-color: var(--header);
+    border: transparent;
+    width: 20rem;
+    padding: 1rem;
+    padding-left: 3rem;
+    border-radius: 0.6rem;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+    position: absolute;
+    top: 14px;
+    left: 12px;
+  }
+  &__select {
+    background-color: var(--header);
+    border: transparent;
+    width: 12rem;
+    padding: 1rem;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 0.6rem;
+  }
+}
+::placeholder {
+  color: rgb(191, 191, 191);
+  font-size: 0.8rem;
+}
