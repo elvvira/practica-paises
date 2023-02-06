@@ -3,6 +3,13 @@
   --header: rgb(71, 79, 164);
   --modal: rgba(56, 62, 133, 0.787);
   --span: rgb(131, 140, 231);
+  --text-color: white;
 }
-
+body.dark {
+  --background: rgb(202, 207, 250);
+  --header: rgb(172, 174, 189);
+  --modal: rgba(100, 102, 120, 0.787);
+  --span: rgb(115, 116, 120);
+  --text-color: rgb(46, 46, 46);
+}
 /* Variables SASS */

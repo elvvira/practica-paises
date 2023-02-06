@@ -14,17 +14,17 @@
     <header class="header">
       <h1>Where in the world?</h1>
       <div class="mode">
-        <img class="mode__icon" src="assets/images/sun-solid.svg" alt="" />
+        <img id="button-theme" class="mode__icon" src="assets/images/sun-solid.svg" alt="" />
         <p>Light mode</p>
       </div>
     </header>
 
     <main class="main">
       <div class="search">
-        <div>
+        <form id="form">
           <img class="search__icon" src="assets/images/magnifying-glass-solid.svg" alt="" />
-          <input id="input" class="search__text" type="text" placeholder="Search for a country..." />
-        </div>
+          <input id="input" class="search__text" name="search" type="text" placeholder="Search for a country..." />
+        </form>
         <div>
           <select class="search__select" name="select" id="select">
             <option value="filter">Filter by Region</option>

@@ -15,7 +15,11 @@ const borderButtons = document.getElementById('border-buttons');
 const cardWindow = async value => {
   const data = await fetchData(`https://restcountries.com/v3.1/name/${value}`);
 
-  // console.dir(data[0].borders);
+  const allCurrencies = Object.keys(data[0].currencies);
+  const allLenguages = Object.keys(data[0].languages);
+  const allTld = Object.keys(data[0].tld);
+
+  console.dir(data[0].tld[allTld[0]]);
 
   modalTitle.textContent = value;
   nativeName.textContent = ' ' + data[0].name.official;
@@ -23,9 +27,9 @@ const cardWindow = async value => {
   region.textContent = ' ' + data[0].region;
   subRegion.textContent = ' ' + data[0].subregion;
   capital.textContent = ' ' + data[0].capital;
-  // level.textContent = ' ' + data[0].tld[0];
-  // currencies.textContent = ' ' + data[0].currencies;x
-  // lenguages.textContent = ' ' + data[0].languages;
+  level.textContent = ' ' + data[0].tld[allTld[0]];
+  currencies.textContent = ' ' + data[0].currencies[allCurrencies[0]].name;
+  languages.textContent = ' ' + data[0].languages[allLenguages[0]];
   flag.src = data[0].flags.png;
 
   const fragment = document.createDocumentFragment();
