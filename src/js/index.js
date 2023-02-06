@@ -11,6 +11,7 @@ const containerCards = document.getElementById('container-cards');
 const modalButton = document.getElementById('modal__button');
 const modal = document.getElementById('modal');
 const buttonTheme = document.getElementById('button-theme');
+const textMode = document.getElementById('text-mode');
 
 const paintCards = async data => {
   const newFragment = createCards(data);
@@ -52,4 +53,10 @@ modalButton.addEventListener('click', e => {
 buttonTheme.addEventListener('click', e => {
   console.dir(e.target);
   document.body.classList.toggle('dark');
+  if (document.body.classList.contains('dark')) {
+    buttonTheme.src = 'assets/images/moon-solid.svg';
+    textMode.textContent = 'Dark mode';
+  } else {
+    buttonTheme.src = 'assets/images/sun-solid.svg';
+  }
 });
